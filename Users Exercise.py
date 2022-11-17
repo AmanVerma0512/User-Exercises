@@ -19,8 +19,8 @@ st.title("Last Exercise Activity System")
 s3_client = boto3.client('s3')
 s3_bucket_name = 'forgefait'
 s3 = boto3.resource('s3',
-                     aws_access_key_id = 'AKIATEQDTHIB3HXL546P',
-                     aws_secret_access_key = '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')
+                     aws_access_key_id = st.secrets["aws_access_key_id"],
+                     aws_secret_access_key = st.secrets["aws_secret_access_key"])
 
 @st.experimental_singleton
 def load_data():
